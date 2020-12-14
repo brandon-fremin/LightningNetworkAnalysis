@@ -3,15 +3,8 @@ Requirements:
 - Code must be run from root of 'Lightning Network Analysis' directory
 - If the code fails, you likely don't have some of the dependencies installed. Run the code commands below to install all dependencies
 
-
 ```
-python -m pip install requests
-python -m pip install matplotlib
-python -m pip install time
-python -m pip install random
-python -m pip install multiprocessing
-python -m pip install json
-python -m pip install pickle
+python -m pip install -r requirements.txt
 ```
 
 Notes:
