@@ -1,4 +1,4 @@
-####Requirements:
+#### Requirements:
 - Python version must be 3.6 or higher (we use f-strings)
 - Code must be run from root of 'Lightning Network Analysis' directory
 - If the code fails, you likely don't have some of the dependencies installed. Run the code commands 
@@ -10,7 +10,7 @@ below to install all dependencies
 python -m pip install -r requirements.txt
 ```
 
-####Notes:
+#### Notes:
 - This program was written to help as an adjunct part of the our final project to help us better understand the
 structure of the lightning network. It is not our entire project. We recommend that just use option 0 when running 
 the main function, but you are free to try out the other options as well.
@@ -18,7 +18,7 @@ the main function, but you are free to try out the other options as well.
 bulk. It may be more efficient to use some of the command is the curl section to collect bulk data. 
 - the `pickles` directory store all of the saved pickles that the program uses
 
-####Running the Main Function:
+#### Running the Main Function:
 - run `python main`
 - then enter the public keys for the nodes you want to route between
 - enter the amount in satoshi you want to route
@@ -30,7 +30,7 @@ bulk. It may be more efficient to use some of the command is the curl section to
   - Extra Loops: Add extra loops between intermediate nodes on the path from source to target
   - Random Routing: Randomly select two nodes which much be on the route from source to target.
 
-####Calling APIs from command line:
+#### Calling APIs from command line:
 - We use two main base endpoints for API calls
   - `https://explorer.acinq.co/` collects information from the Lightning Network Explorer
   - `https://ln.bigsun.xyz/api/` collects live node and channel information from an existing API
