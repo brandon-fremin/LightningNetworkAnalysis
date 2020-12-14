@@ -8,6 +8,7 @@ def exclusive_path(source, target, optimal_route, all_nodes, channel_balances, a
         return optimal_route
 
     exclusion_list = optimal_route
+
     def exclusive_verify(node, channel, channel_balances, amount):
         source_id = node["id"]
         target_id = channel["peer_id"]
@@ -79,7 +80,7 @@ def extra_loops(source, target, amount, all_nodes, channel_balances, distance_fu
             break
 
     if optimal:
-        print(f"Optimal route required {num_tries} attempts, {hops} hops:")
+        print(f"Route required {num_tries} attempts, {hops} total hops:")
         [print(o) for o in optimal]
     else:
         pass

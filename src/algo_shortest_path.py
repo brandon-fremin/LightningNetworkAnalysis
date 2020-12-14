@@ -42,7 +42,7 @@ def shortest_path(source, target, amount, all_nodes, channel_balances, distance_
             break
 
     if optimal:
-        print(f"Optimal route required {num_tries} attempts, {hops} hops:")
+        print(f"Route required {num_tries} attempts, {hops} total hops:")
         [print(o) for o in optimal]
     else:
         pass

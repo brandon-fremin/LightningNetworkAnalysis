@@ -68,7 +68,7 @@ def random_routing(source, target, amount, all_nodes, channel_balances, valid_id
             break
 
     if len(optimal) > 0:
-        print(f"Optimal route required {num_tries} attempts, {hops} hops:")
+        print(f"Route required {num_tries} attempts, {hops} total hops:")
         [print(o) for o in optimal]
     else:
         pass

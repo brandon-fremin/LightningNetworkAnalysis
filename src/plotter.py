@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from src.helper import load
 
 
-def box_plot(filename="1.pkl", fieldname="final_dist", metric_label="Path Length"):
+def box_plot(filename="1.pkl", fieldname="final_dist", metric_label="Path Length", price="10k"):
     json_data = load(filename)
     if not json_data:
         return
@@ -34,7 +34,7 @@ def box_plot(filename="1.pkl", fieldname="final_dist", metric_label="Path Length
 
     plt.scatter(x, y, s=10, c=c)
     plt.boxplot(data)
-    plt.title(f'{metric_label} for {len(data_1)} Samples of 3 Routing Algorithms [10k sat]')
+    plt.title(f'{metric_label} for {len(data_1)} Samples of 3 Routing Algorithms [{price} sat]')
     plt.xticks([1, 2, 3], ["short", "loop", "rand"])
     plt.ylabel(f"{metric_label}")
     plt.xlabel("Algorithm Type")

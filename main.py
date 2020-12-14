@@ -165,8 +165,7 @@ def route_transaction(all_nodes, channel_balances, disconnected_keys):
     valid_options = ["0", "1", "2", "q"]
     user_input = input("Select a routing algorithm: \n[0] Shortest Path\n[1] Extra Loops\n[2] Random Routing\nChoice: ")
     while user_input not in valid_options:
-        user_input = input(
-            "Invalid selection :(\nSelect a routing algorithm: \n[0] Shortest Path\n[1] Extra Loops\n[2] Random Routing\nChoice: ")
+        user_input = input("Invalid selection :(\nSelect a routing algorithm: \n[0] Shortest Path\n[1] Extra Loops\n[2] Random Routing\nChoice: ")
 
     if user_input == "0":
         shortest_path(source, target, amount, all_nodes, channel_balances, distance_function, evaluation_function)
@@ -189,22 +188,22 @@ def main():
     options = ["0", "1", "2", "3", "4"]
     while user_input != "q":
         print("Options... [enter q to quit]")
-        print("[0] Reload live data (this will take a while)")
-        print("[1] Randomize channel balances")
-        print("[2] Collect data to compare algorithms")
-        print("[3] Plot existing data")
-        print("[4] Route a transaction")
+        print("[0] Route a transaction")
+        print("[1] Reload live data (this will take a while)")
+        print("[2] Randomize channel balances")
+        print("[3] Collect data to compare algorithms")
+        print("[4] Plot existing data")
         user_input = input("Please select an option: ")
         if user_input in options:
-            if user_input == "0":
+            if user_input == "1":
                 all_nodes, all_channels = reload_live_data()
-            elif user_input == "1":
-                channel_balances, disconnected_keys = randomize_channel_balances(all_nodes, all_channels)
             elif user_input == "2":
-                collect_data_to_compare_algorithms(all_nodes, channel_balances, disconnected_keys)
+                channel_balances, disconnected_keys = randomize_channel_balances(all_nodes, all_channels)
             elif user_input == "3":
-                plot_existing_data()
+                collect_data_to_compare_algorithms(all_nodes, channel_balances, disconnected_keys)
             elif user_input == "4":
+                plot_existing_data()
+            elif user_input == "0":
                 route_transaction(all_nodes, channel_balances, disconnected_keys)
 
 
